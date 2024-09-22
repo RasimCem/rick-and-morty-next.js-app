@@ -1,11 +1,22 @@
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Hero from "./Hero";
+import Card from "./Card";
+import Search from "./Search";
+import LocationTable from "./LocationTable";
+import EpisodeTable from "./EpisodeTable";
+import CharacterDetail from "./CharacterDetail";
+
 
 
 
 export {
-    Header,
+    Navbar,
     Footer,
-    Hero
+    Hero,
+    Card,
+    Search,
+    LocationTable,
+    EpisodeTable,
+    CharacterDetail
 }
