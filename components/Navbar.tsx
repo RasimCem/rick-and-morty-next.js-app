@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full block flex-grow lg:flex lg:items-center lg:w-auto justify-end`}>
                 <div className="lg:flex-grow lg:flex lg:justify-end lg:space-x-8 space-y-4 lg:space-y-0">
                     {items.map((item, index) => (
-                        <Link href={item.path} className="block lg:inline-block text-xl font-semibold leading-6 text-gray-900 group relative w-max">
+                        <Link href={item.path} key={index} className="block lg:inline-block text-xl font-semibold leading-6 text-gray-900 group relative w-max">
                             <span>{item.name}</span>
                             <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-green-600 group-hover:w-3/6"></span>
                             <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-green-600 group-hover:w-3/6"></span>

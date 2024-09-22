@@ -4,7 +4,11 @@ import { CharacterProps } from "@/types";
 import { useState, useEffect } from "react";
 import { Card, Hero } from "@/components";
 
-const Page = ({ params }) => {
+interface Params {
+    characterIds: string;
+}
+
+const Page = ({ params }: { params: Params }) => {
     const characterIds = decodeURIComponent(params.characterIds);
     const [characters, setCharacters] = useState<CharacterProps[]>([]);
 

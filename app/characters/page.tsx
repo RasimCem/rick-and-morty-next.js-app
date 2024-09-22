@@ -21,7 +21,7 @@ const CharactersPage = () => {
         if (response.ok) {
             const result = await response.json();
             console.log(result, page);
-            if (page <= result.info.pages) {
+            if (page < result.info.pages) {
                 setCharacters([...characters, ...result.results]);
                 setPage(page + 1);
             }

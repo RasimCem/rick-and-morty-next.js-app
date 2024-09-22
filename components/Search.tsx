@@ -2,7 +2,7 @@ import { SearchProps } from "@/types";
 import { useState } from 'react';
 
 
-const Search = ({ handleSubmit, placeHolder, searchQuery, setSearchQuery }): SearchProps => {
+const Search = ({ handleSubmit, placeHolder, searchQuery, setSearchQuery }: SearchProps) => {
 
     return (
         <form onSubmit={handleSubmit}>

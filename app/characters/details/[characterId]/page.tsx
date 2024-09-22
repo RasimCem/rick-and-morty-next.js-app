@@ -14,7 +14,6 @@ const CharacterDetailsPage = ({ params }: { params: { characterId: number } }) =
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
         if (response.ok) {
             const result = await response.json();
-            console.log(result);
             setCharacterDetail(result);
         }
     }
@@ -28,9 +27,16 @@ const CharacterDetailsPage = ({ params }: { params: { characterId: number } }) =
             <Hero
                 title="Character Details"
             />
-            <CharacterDetail
-                character={characterDetail}
-            />
+            {characterDetail && (
+                <CharacterDetail
+                    id={characterDetail.id}
+                    image={characterDetail.image}
+                    name={characterDetail.name}
+                    status={characterDetail.status}
+                    species={characterDetail?.species}
+                    location={characterDetail?.location}
+                />
+            )}
         </div>
     );
 }

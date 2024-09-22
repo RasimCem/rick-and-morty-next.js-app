@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CardProps } from "@/types";
 
 
-const Card = ({ imagePath, title, link }: { imagePath: string, title: string, link: string }): CardProps => {
+const Card = ({ imagePath, title, link }: CardProps) => {
 
     return (
         <Link href={link} passHref className="">

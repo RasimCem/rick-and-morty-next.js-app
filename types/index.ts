@@ -5,8 +5,10 @@ export interface CardProps {
 }
 
 export interface SearchProps {
-    handleSubmit: (value: string) => void;
+    handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
     placeHolder: string;
+    searchQuery: string;
+    setSearchQuery: (value: string) => void;
 }
 
 export interface CharacterProps {
@@ -17,6 +19,22 @@ export interface CharacterProps {
     location: {
         name: string;
         url: string;
-    },
+    };
     image: string;
+}
+
+export interface EpisodeProps {
+    id: number;
+    episode: string;
+    name: string;
+    air_date: string;
+    characters: string[];
+}
+
+export interface LocationProps {
+    id: number;
+    name: string;
+    type: string;
+    dimension: string;
+    residents: string[];
 }

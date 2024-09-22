@@ -1,11 +1,12 @@
 "use client";
+import { EpisodeProps } from '@/types';
 import Link from 'next/link';
 import { useState, useEffect } from "react";
 import { useInView } from 'react-intersection-observer'
 
-const LocationTable = () => {
+const EpisodeTable = () => {
     const [page, setPage] = useState(1);
-    const [episodes, setEpisodes] = useState([]);
+    const [episodes, setEpisodes] = useState<EpisodeProps[]>([]);
     const { ref, inView } = useInView();
 
     const fetchData = async () => {
@@ -67,7 +68,7 @@ const LocationTable = () => {
                                     <Link href={targetRoute}>
                                         <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-lime-300 group-hover:from-green-400 group-hover:to-lime-300 focus:ring-4 focus:outline-none focus:ring-lime-200 ">
                                             <span className="relative px-3 py-1.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
-                                                Show Characters 
+                                                Show Characters
                                             </span>
                                         </button>
                                     </Link>
@@ -75,8 +76,6 @@ const LocationTable = () => {
                             </tr>
                         )
                     })}
-
-
                 </tbody>
             </table>
             <div ref={ref}></div>
@@ -84,4 +83,4 @@ const LocationTable = () => {
     );
 }
 
-export default LocationTable;
+export default EpisodeTable;

@@ -1,11 +1,12 @@
 "use client";
 import Link from 'next/link';
 import { useState, useEffect } from "react";
-import { useInView } from 'react-intersection-observer'
+import { useInView } from 'react-intersection-observer';
+import { LocationProps } from '@/types';
 
-const LocationTable = () => {
+const LocationTable = ({ id, name, type, dimension, residents }: LocationProps) => {
     const [page, setPage] = useState(1);
-    const [locations, setLocations] = useState([]);
+    const [locations, setLocations] = useState<LocationProps[]>([]);
     const { ref, inView } = useInView();
 
     const fetchData = async () => {
