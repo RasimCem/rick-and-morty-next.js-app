@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
 import { LocationProps } from '@/types';
 
-const LocationTable = ({ id, name, type, dimension, residents }: LocationProps) => {
+const LocationTable = () => {
     const [page, setPage] = useState(1);
     const [locations, setLocations] = useState<LocationProps[]>([]);
     const { ref, inView } = useInView();
