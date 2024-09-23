@@ -4,4 +4,4 @@
 
 ## Links
 
-Vercel: [Rick And Morty App](https://rick-and-morty-next-js-jav7brzhk-rasimcems-projects.vercel.app/)
+Vercel: [Rick And Morty App](https://rick-and-morty-next-js-app.vercel.app/)
